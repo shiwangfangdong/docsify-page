@@ -26,6 +26,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
@@ -46,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687183944042</updated>
       <workItem from="1687183946107" duration="891000" />
+      <workItem from="1687227497513" duration="37000" />
     </task>
     <servers />
   </component>
