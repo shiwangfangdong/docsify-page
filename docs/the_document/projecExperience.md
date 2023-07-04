@@ -6,7 +6,7 @@
 
 1. **springboot**项目中如何增加依赖
 
-   ![image-20230524155803753](C:\Users\14573\AppData\Roaming\Typora\typora-user-images\image-20230524155803753.png)
+   <img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/%E9%A1%B9%E7%9B%AE%E5%BF%83%E5%BE%97/1.png" style="zoom: 67%;" /> 
 
    > 个别依赖可以不需要添加版本,由**springboot**决定.
 
@@ -14,13 +14,35 @@
 
     * **springmvc**是在新建springboot项目时添加**springweb**即可,**mybatis-plus**和**druid**则需要单独添加依赖
 
-3. 完整的项目结构
+3. 完整的项目结构  
 
-   ![image-20230524160505518](C:\Users\14573\AppData\Roaming\Typora\typora-user-images\image-20230524160505518.png)
+   ```
+   .
+   └── vehicle
+       ├── config （配置文件）
+       ├── constants
+       	└── ~.java (存放枚举类)
+       ├── controller
+       	└── EntiyNameController.java
+       ├── dto
+       	└── ~Dto.java (单个或多个项目库表中得到的字段组成的类)
+       ├── entiy
+       	└── EntiyName.java （跟据库表的实体类）
+       ├── mapper
+       	├── xml
+       		└── EntiyNameMapper.xml
+       	└── EntiyNameMapper.java
+       ├── service
+       	├── impl
+       		└── EntiyNameServiceImpl.java
+       	└── IEntiyNameService.interface
+       └── vo
+           └── ~Vo.java (存放视图对象用于前端展示)
+   ```
 
-    * **config** 包中存放配置类,需加注解**@Configuration**
+    * **config** 包中存放配置类,需加注解 **@Configuration**
 
-    * **constants **包中存放枚举类
+    * **constants** 包中存放枚举类
 
     * **controller** 包中存放控制器,springboot项目中使用注解**@RestController**
 
@@ -34,9 +56,9 @@
 
     * **service** 包中存放的是项目服务层代码继承于**Iservice<>**,含有子包**impl**,存放相应的实现类需要使用注解**@service**
 
-      > ![image-20230524164513479](C:\Users\14573\AppData\Roaming\Typora\typora-user-images\image-20230524164513479.png) 一般命名时前面加"**I**"
+      > <img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/%E9%A1%B9%E7%9B%AE%E5%BF%83%E5%BE%97/3.png" style="zoom: 50%;" /> 一般命名时前面加"**I**"
       >
-      > ![image-20230524165051415](C:\Users\14573\AppData\Roaming\Typora\typora-user-images\image-20230524165051415.png) 实现类中需要继承于**ServiceImpl<mapper接口,实体类>**
+      > <img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/%E9%A1%B9%E7%9B%AE%E5%BF%83%E5%BE%97/Snipaste_2023-07-04_14-22-34.png" style="zoom:67%;" /> 实现类中需要继承于ServiceImpl<mapper接口,实体类>
 
     * ❓**vo** 包中存放视图对象用于前端展示
 
@@ -44,7 +66,7 @@
 
     * 根据原型界面编写接口,无直接前端页面展示,所以很多接口功能需要想象着去做,需要一定经验.
 
-    * 在**controller**层编写接口功能以及设置注解**@RequestMapping**,在ApiFox进行测试
+    * 在**controller**层编写接口功能以及设置注解 **@RequestMapping**,在ApiFox进行测试
 
       > **ApiFox**需要注意以下几点 :
       >
@@ -62,7 +84,7 @@
 
     * **jeecgboot**封装了一个返回接口返回对象**Result<T>**,对于全部的**controller**层方法返回的对象都需要被这个返回接口对象封装一下.
 
-    * **lombok**,使用**@Data**等注解可以简化代码
+    * **lombok**,使用 **@Data**等注解可以简化代码
 
 5. 项目分工与**Git**
 
@@ -79,8 +101,6 @@
     7. 代码完成自己需要在**ApiFox**进行测试.
     8. 测试通过再次查阅代码,消除没使用的jar包等.
     9. 与前端联调完成整体项目.
-
-
 
 
 
@@ -103,7 +123,7 @@
    > 1. Maven 导入的依赖通常都是 jar 包。
    > 2. 想将自己的项目作为依赖导入到另一个项目中，需要先将自己的项目打包并安装到本地 Maven 仓库或部署到远程 Maven 仓库。然后，在需要使用该依赖的项目的 `pom.xml` 文件中添加相应的依赖信息，包括 `groupId`、`artifactId` 和 `version`。
 
-1. **maven**常用命令,如**mvn clean**,**mvn test**的学习？
+2. **maven**常用命令,如**mvn clean**,**mvn test**的学习？
 
    > - `mvn clean`：此命令用于清理项目目录中的 `target` 文件夹，删除所有之前构建生成的文件。
    > - `mvn compile`：此命令用于编译项目的源代码。
@@ -112,19 +132,19 @@
    > - `mvn install`：此命令用于将项目打包并安装到本地 Maven 仓库，以便其他项目可以将其作为依赖使用。
    > - `mvn deploy`：此命令用于将项目打包并部署到远程 Maven 仓库。
 
-2. **spring**常用注解理解？**@RestController**和**@Controller**的区别,**@Resource**和**@Autowired**区别 ？**@Configuration**注解如何使用以及理解？
+3. **spring**常用注解理解？`@RestControlle` 和 `@Controller` 的区别,`@Resource`和`@Autowired `区别 ？`@Configuration`注解如何使用以及理解？
 
-   > **@RestController**和**@Controller**的区别
+   > `@RestController`和`@Controller`的区别
    >
    > 1. `@Controller` 和 `@RestController` 都是用于标记控制器类的注解
    > 2. `@RestController` 是一个特殊的控制器注解，它是 `@Controller` 和 `@ResponseBody` 注解的组合。使用该注解之后所有方法的返回值都会被转换为 JSON 或 XML 并写入响应体中。
    > 3. `@Controller` 用于定义通用的控制器，支持返回视图和数据；而 `@RestController` 用于定义 RESTful 风格的控制器，只支持返回数据。
    >
-   > **@Resource**和**@Autowired**区别
+   > `@Resource`和` @Autowired`区别
    >
    > 1. `@Autowired` 默认按类型进行自动装配，可以通过 `@Qualifier` 注解来指定 bean 的名称；而 `@Resource` 默认按名称进行自动装配，可以通过 `name` 属性来指定 bean 的名称。基本上可以全部使用`@Resource`。
 
-3. 枚举类的使用场景，**枚举类**与**普通类**的不同？
+4. 枚举类的使用场景，**枚举类**与**普通类**的不同？
 
    > `枚举类`与`普通类`的不同
    >
@@ -134,7 +154,54 @@
    >
    > 1. 枚举类通常用于表示一组固定的值，例如星期、月份、颜色等。
 
-4. 公司目前使用的**PostgreSQL**数据库和**MYSQL**数据库有何不同？
+5. 公司目前使用的**PostgreSQL**数据库和**MYSQL**数据库有何不同？  
+
+   > #### 区别  
+   >
+   > 　　MySQL是应用开发者创建出来的DBMS；而PostgreSQL是由数据库开发者创建出来的DBMS 。换句话说，MySQL倾向于使用者的角度，回答的问题是 “你想解决的是什么问题”；而PostgreSQL倾向于理论角度，回答的问题是 “数据库应该如何来解决问题” 。
+   >
+   > 　　MySQL一般会将数据合法性验证交给客户；PostgreSQL在合法性难方面做得比较严格。比如MySQL里插入 “2012-02-30” 这个时间时，会成功，但结果会是 “0000-00-00”；PostgreSQL不允许插入此值。
+   >
+   > 　　通常，PostgreSQL 被认为特性丰富，而MySQL被认为速度更快。但这个观点基本是在 MySQL 4.x / PostgreSQL 7.x 的事情，现在情况已经变了，PostgreSQL 在9.x版本速度上有了很大的改进，而MySQL特性也在增加。
+   >
+   > 　　在架构上，MySQL分为两层：上层的SQL层和几个存储引擎（比如InnoDB，MyISAM）。PostgreSQL 只有一个存储引擎提供这两个功能。
+   >
+   > 　　这两个数据库系统都可以针对应用的情境被优化、定制，精确的说哪个性能更好很难。MySQL项目一开始焦点就在速度上，而PostgreSQL一开始焦点在特性和规范标准上。
+   >
+   > #### 选哪个❓  
+   >
+   > 　　从应用场景来说，PG更加适合严格的企业应用场景（比如金融、电信、ERP、CRM），而MySQL更加适合业务逻辑相对简单、数据可靠性要求较低的互联网场景（比如google、facebook、alibaba）。
+
+   >  PostgreSQL支持经纬度存储
+
+   > 两者都支持JSON格式数据储存
+   >
+   > JSON：JavaScript Object Notation JS对象简谱 , 是一种轻量级的数据交换格式.  
+   >
+   > JSON格式数据：  
+   >
+   > **一个对象, 由一个大括号表示.** 括号中 描述对象的属性 ，通过键值对来描述对象的属性 (可以理解为, 大括号中, 包含的是一个个的键值对.)
+   >
+   > ```
+   > { 
+   > 	"name":"金苹果", 
+   > 	"info":"种苹果" 
+   > }
+   > ```
+   >
+   > 等同于java格式数据：
+   >
+   > ```
+   > > class Book{ 
+   > > 　　　private String name; 
+   > > 　　　private String info;
+   > > 　　　get/set... 
+   > > 　　　}
+   > >  　　Book b = new Book();
+   > >   　　b.setName(“金苹果”); 
+   > >   　　b.setInfo(“种苹果”); 
+   > >      　　...
+   > ```
 
 5. **lombok**插件的使用,各个注解都是代表什么？
 
@@ -206,12 +273,53 @@
    > > boolean result = service.saveBatch(entityList);
    > > ```
 
-9. **Git**相关概念学习以及语法使用？
+9. **Git**相关概念学习以及语法使用？    
 
+   > #### 什么是git ❓  
+   >
+   > Git是目前世界上最先进的分布式版本控制系统。    
+   >
+   > #### git的安装  
+   >
+   > 直接安装即可，一直next    
+   >
+   > #### git的工作流程  
+   >
+   > <img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/%E9%A1%B9%E7%9B%AE%E5%BF%83%E5%BE%97/Snipaste_2023-07-04_15-14-01.png" width="30%">  
+   >
+   > #### git一些基础指令
+   >
+   > ```
+   > mkdir：         XX (创建一个空目录 XX指目录名)
+   > pwd：          显示当前目录的路径。
+   > git init          把当前的目录变成可以管理的git仓库，生成隐藏.git文件。
+   > git add XX       把xx文件添加到暂存区去。
+   > git commit –m “XX”  提交文件 –m 后面的是注释。
+   > git status        查看仓库状态
+   > git diff  XX      查看XX文件修改了那些内容
+   > git log          查看历史记录
+   > git reset  --hard HEAD^ 或者 git reset  --hard HEAD~ 回退到上一个版本
+   >                      (如果想回退到100个版本，使用git reset –hard HEAD~100 )
+   > cat XX         查看XX文件内容
+   > git reflog       查看历史记录的版本号id
+   > git checkout -- XX  把XX文件在工作区的修改全部撤销。
+   > git rm XX          删除XX文件
+   > git remote add origin https://github.com/tugenhua0707/testgit 关联一个远程库
+   > git push –u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库
+   > git clone https://github.com/tugenhua0707/testgit  从远程库中克隆
+   > git checkout –b dev  创建dev分支 并切换到dev分支上
+   > git branch  查看当前所有的分支
+   > git checkout master 切换回master分支
+   > git merge dev    在当前的分支上合并dev分支
+   > git branch –d dev 删除dev分支
+   > git branch name  创建分支
+   > git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作
+   > git stash list 查看所有被隐藏的文件列表
+   > git stash apply 恢复被隐藏的文件，但是内容不删除
+   > git stash drop 删除文件
+   > git stash pop 恢复文件的同时 也删除文件
+   > git remote 查看远程库的信息
+   > git remote –v 查看远程库的详细信息
+   > git push origin master  Git会把master分支推送到远程库对应的远程分支上
+   > ```
 
-
-
-
-
-
- 

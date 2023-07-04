@@ -4,7 +4,7 @@
 
 **Neo4j** 是一个高性能的 ``NoSQL``图形数据库，它将结构化数据存储在网络（从数学角度叫做图）上而不是表中。Neo4j 也可以被看作是一个高性能的图引擎，该引擎具有成熟数据库的所有特性。
 
-![image-20230612092138180](https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230621104749.png)
+![image-20230612092138180](https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230621104749.png)  
 
 > 你和任何一个陌生人之间所间隔的人不会超过六个
 > 即最多通过6个中间人你就能够认识任何一个陌生人
