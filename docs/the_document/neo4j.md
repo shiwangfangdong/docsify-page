@@ -4,7 +4,7 @@
 
 **Neo4j** 是一个高性能的 ``NoSQL``图形数据库，它将结构化数据存储在网络（从数学角度叫做图）上而不是表中。Neo4j 也可以被看作是一个高性能的图引擎，该引擎具有成熟数据库的所有特性。
 
-![image-20230612092138180](https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230621104749.png)  
+<img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230621104749.png" alt="image-20230612092138180" style="zoom:50%;" />  
 
 > 你和任何一个陌生人之间所间隔的人不会超过六个
 > 即最多通过6个中间人你就能够认识任何一个陌生人
@@ -29,7 +29,7 @@
 
 ### Neo4j是怎样存储错综复杂的用户关系的?
 
-![image-20230612093942116](https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047491.png)
+<img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047491.png" alt="image-20230612093942116" style="zoom:50%;" /> 
 
 * 节点：节点通常用来表示实体，是组成图的最小单位。一个节点就类似一个实体类的具体对象。节点存在各种属性，例如姓名，id，标签等，但是必须确定某一属性为唯一性，类似**mysql**主键，该节点的该属性值具有唯一性且非空。
 * 标签：标签用于分类节点，节点可以没有标签但是也可以存在多个标签。类似于学生类、员工类等等，如果一个节点又是学生又是员工，那这个节点就存在多个标签。
@@ -61,13 +61,13 @@ Neo4j有两种方式做图，一种是直接创建节点、关系等，另一种
 首先制作三张**csv**表文件。
 
 第一个实体：  
-![image-20230612105114509](https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047492.png)
+<img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047492.png" alt="image-20230612105114509" style="zoom:50%;" /> 
 
 第二个实体：  
-![image-20230612105131269](https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047493.png)
+<img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047493.png" alt="image-20230612105131269" style="zoom:50%;" />
 
 关系文件：  
-![image-20230612105155735](https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047494.png)
+<img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047494.png" alt="image-20230612105155735" style="zoom:50%;" />
 
 > 注意：因为**csv**文件含有中文，所以需要修改编码为**UTF-8**。
 
@@ -127,7 +127,7 @@ neo4j.bat console
    create (D)-[:LINKED_TO{weight:40}]->(E) 
    ```
 
-   <img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047496.png" alt="image-20230612173120384" style="zoom: 67%;" /> 
+   <img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047496.png" alt="image-20230612173120384" style="zoom: 50%;" /> 
 
 5. 查询A->E的最近距离
 
@@ -141,9 +141,11 @@ neo4j.bat console
    return gds.util.asNode(nodeId).name,cost
    ```
 
-   <img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047497.png" alt="image-20230612173253077" style="zoom:67%;" /> 
+   <img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047497.png" alt="image-20230612173253077" style="zoom: 50%;" />    
 
-   ![image-20230612173305325](https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047498.png) 
+   
+   
+   <img src="https://wangfangdong.oss-cn-hangzhou.aliyuncs.com/neo4j/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202306211047498.png" alt="image-20230612173305325" style="zoom:50%;" />  
 
 
 
