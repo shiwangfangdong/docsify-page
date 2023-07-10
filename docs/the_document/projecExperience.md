@@ -102,7 +102,7 @@
     8. 测试通过再次查阅代码,消除没使用的jar包等.
     9. 与前端联调完成整体项目.
 
-
+  
 
 ## 疑问 (已解答)❗
 
@@ -166,8 +166,8 @@
    >
    > 　　在架构上，MySQL分为两层：上层的SQL层和几个存储引擎（比如InnoDB，MyISAM）。PostgreSQL 只有一个存储引擎提供这两个功能。
    >
-   > 　　这两个数据库系统都可以针对应用的情境被优化、定制，精确的说哪个性能更好很难。MySQL项目一开始焦点就在速度上，而PostgreSQL一开始焦点在特性和规范标准上。
-   >
+   > 　　这两个数据库系统都可以针对应用的情境被优化、定制，精确的说哪个性能更好很难。MySQL项目一开始焦点就在速度上，而PostgreSQL一开始焦点在特性和规范标准上。  
+
    > #### 选哪个❓  
    >
    > 　　从应用场景来说，PG更加适合严格的企业应用场景（比如金融、电信、ERP、CRM），而MySQL更加适合业务逻辑相对简单、数据可靠性要求较低的互联网场景（比如google、facebook、alibaba）。
@@ -192,15 +192,15 @@
    > 等同于java格式数据：
    >
    > ```
-   > > class Book{ 
-   > > 　　　private String name; 
-   > > 　　　private String info;
-   > > 　　　get/set... 
-   > > 　　　}
-   > >  　　Book b = new Book();
-   > >   　　b.setName(“金苹果”); 
-   > >   　　b.setInfo(“种苹果”); 
-   > >      　　...
+   > class Book{ 
+   > 　　　private String name; 
+   > 　　　private String info;
+   >  　　　get/set... 
+   >  　　　}
+   >  　　Book b = new Book();
+   >   　　b.setName(“金苹果”); 
+   >   　　b.setInfo(“种苹果”); 
+   >      　　...
    > ```
 
 5. **lombok**插件的使用,各个注解都是代表什么？
